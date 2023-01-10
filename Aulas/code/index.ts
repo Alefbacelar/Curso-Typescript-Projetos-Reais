@@ -1,6 +1,6 @@
 console.log('Olá mundo!')
 
-function add (num1, num2){
+function add (num1:any, num2:any){
   return num1 + num2
 }
 
