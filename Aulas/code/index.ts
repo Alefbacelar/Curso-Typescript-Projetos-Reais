@@ -65,3 +65,10 @@ let itemName: string
 
 itemInput = 10
 itemInput = 'agora é string'
+
+//NEVER NÃO PASSA NADA GERA ERRO E PARA APLICAÇÃO
+
+function generateError(message: string, code:number): never{
+  throw {message: message, errorCode: code}
+}
+generateError('A aplicação travou', 500)
