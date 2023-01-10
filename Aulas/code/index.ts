@@ -51,3 +51,9 @@ function resultado(price: number){
   console.log('O resultado' + price)
 }
 
+//Objetos
+
+const usuario = {
+  name: 'Alef Bacelar',
+  idade: 27,
+}
