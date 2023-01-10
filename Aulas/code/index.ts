@@ -57,3 +57,11 @@ const usuario = {
   name: 'Alef Bacelar',
   idade: 27,
 }
+
+// O UNKNOWN parecido com o any, ele pode ser qualquer coisa de uma forma temporaria.
+
+let itemInput: unknown
+let itemName: string
+
+itemInput = 10
+itemInput = 'agora é string'
