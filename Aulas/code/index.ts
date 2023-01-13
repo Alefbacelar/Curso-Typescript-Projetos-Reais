@@ -200,3 +200,7 @@ const e1: incluir = {
   const allMyArrays: (number | string)[][] = [sequence, animals, stringsAndNumbers] 
 
   console.log(allMyArrays) */
+
+
+  let code : number = 20
+  console.log(code)

@@ -126,16 +126,17 @@ const e1: incluir = {
 /*   let isALef: boolean = true
   console.log(`${isAlef ? 'Oh, Hi Alef' : 'who are you?'}`) */
 /* Exercicio 4 */
-var integer = 6;
-var float = 6.66;
-var hex = 0xf00d;
-var binary = 666;
-var octal = 484;
-var negZero = -0;
-var actuallyNumber = NaN;
-var largestNumber = Number.MAX_VALUE;
-var mostBigLyNumber = Infinity;
-var members = [
+/*    const integer: number = 6 ;
+   const float: number = 6.66 ;
+   const hex: number = 0xf00d ;
+   const binary: number = 0b1010011010;
+   const octal: number = 0o744;
+   const negZero: number = -0;
+   const actuallyNumber: number = NaN;
+   const largestNumber: number = Number.MAX_VALUE ;
+   const mostBigLyNumber: number = Infinity;
+   
+   const members: number[] = [
     integer,
     float,
     hex,
@@ -145,6 +146,17 @@ var members = [
     actuallyNumber,
     largestNumber,
     mostBigLyNumber
-];
-members[0] = 12345;
-console.log(members);
+   ];
+
+   members[0] = 12345
+
+   console.log(members) */
+/* Exercicio 5 */
+/*  const sequence: number[] = Array.from(Array(10).keys());
+ const animals :string [] = ['pangolin', 'aadvark', 'echidna', 'binturong'];
+ const stringsAndNumbers: (number | string)[] = [1, 'one',2, 'two', 3, 'three'];
+ const allMyArrays: (number | string)[][] = [sequence, animals, stringsAndNumbers]
+
+ console.log(allMyArrays) */
+var code = 20;
+console.log(code);
