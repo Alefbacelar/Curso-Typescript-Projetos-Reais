@@ -123,5 +123,28 @@ const e1: incluir = {
 
  console.log(`I like to eat ${pie}-flavored pie.`) */
 /* Exercicio 3 */
-var isALef;
-console.log("" + ('isAlef' ? 'Oh, Hi Alef' : 'who are you?'));
+/*   let isALef: boolean = true
+  console.log(`${isAlef ? 'Oh, Hi Alef' : 'who are you?'}`) */
+/* Exercicio 4 */
+var integer = 6;
+var float = 6.66;
+var hex = 0xf00d;
+var binary = 666;
+var octal = 484;
+var negZero = -0;
+var actuallyNumber = NaN;
+var largestNumber = Number.MAX_VALUE;
+var mostBigLyNumber = Infinity;
+var members = [
+    integer,
+    float,
+    hex,
+    binary,
+    octal,
+    negZero,
+    actuallyNumber,
+    largestNumber,
+    mostBigLyNumber
+];
+members[0] = 12345;
+console.log(members);
