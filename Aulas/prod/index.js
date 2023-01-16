@@ -23,6 +23,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+/* import { Class } from "@mui/icons-material"; */
 //COMO FUNCIONA O TIPO ANY
 /* let price = 40
 let item = 'Apple'
@@ -367,24 +368,37 @@ function logPerson(person: Person){
 
 persons.forEach(logPerson) */
 //EXERCICIO 2
-var Animal = /** @class */ (function () {
-    function Animal(name) {
-        this.name = name;
+/* class Animal {
+  constructor(public name:string){}
+  move(meters: number){
+    console.log(`${this.name} moved ${meters}m.`)
+  }
+}
+
+class Snake extends Animal{
+  move(meters:number = 5) {
+    console.log('Slithering')
+    super.move(meters)
+  }
+} */
+//EXERCICIO 3
+var furniture = /** @class */ (function () {
+    function furniture(manuFacturer) {
+        if (manuFacturer === void 0) { manuFacturer = 'Ikea'; }
+        this.manuFacturer = manuFacturer;
     }
-    Animal.prototype.move = function (meters) {
-        console.log(this.name + " moved " + meters + "m.");
-    };
-    return Animal;
+    return furniture;
 }());
-var Snake = /** @class */ (function (_super) {
-    __extends(Snake, _super);
-    function Snake() {
+var Desk = /** @class */ (function (_super) {
+    __extends(Desk, _super);
+    function Desk() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Snake.prototype.move = function (meters) {
-        if (meters === void 0) { meters = 5; }
-        console.log('Slithering');
-        _super.prototype.move.call(this, meters);
+    Desk.prototype.kind = function () {
+        console.log("This is a desk made by " + this.manuFacturer);
     };
-    return Snake;
-}(Animal));
+    return Desk;
+}(furniture));
+var desk = new Desk();
+desk.kind();
+//desk.manuFacturer

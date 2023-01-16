@@ -8,6 +8,8 @@ let result = add(5, 6)
 
 console.log(result); */
 
+/* import { Class } from "@mui/icons-material"; */
+
 //COMO FUNCIONA O TIPO ANY
 
 /* let price = 40
@@ -431,7 +433,7 @@ persons.forEach(logPerson) */
 
 //EXERCICIO 2
 
-class Animal {
+/* class Animal {
   constructor(public name:string){}
   move(meters: number){
     console.log(`${this.name} moved ${meters}m.`)
@@ -443,4 +445,21 @@ class Snake extends Animal{
     console.log('Slithering')
     super.move(meters)
   }
+} */
+
+
+//EXERCICIO 3
+
+class furniture {
+  constructor(protected manuFacturer:string = 'Ikea'){}
 }
+
+class Desk extends furniture{
+  kind(){
+    console.log(`This is a desk made by ${this.manuFacturer}`)
+  }
+}
+
+const desk = new Desk()
+desk.kind()
+//desk.manuFacturer
