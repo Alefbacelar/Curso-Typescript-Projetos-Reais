@@ -208,7 +208,7 @@ const e1: incluir = {
 
   // CRIANDO CLASSES SESSÃO 6
 
-  class Users {
+ /*  class Users {
     name: string
     balance: number
 
@@ -224,7 +224,32 @@ const e1: incluir = {
 
   const user1 = new Users('Alef',20)
   user1.addMoney(100)
+
   const user2 = new Users('Bacelar',40)
   user2.addMoney(500)
+
   console.log(user1)
-  console.log(user2)
+  console.log(user2) */
+
+
+//  INTERFACE
+
+interface Item {
+  name: string
+  price: number
+
+  itemPurchased(message: string):void
+}
+
+let product1: Item
+
+product1 = {
+  name: 'apple',
+  price: 2,
+
+  itemPurchased(message: string){
+    console.log(message + this.name)
+  }
+}
+
+product1.itemPurchased('You just bought a ')
