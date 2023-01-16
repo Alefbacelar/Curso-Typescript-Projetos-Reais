@@ -349,3 +349,23 @@ room.A202 = 'Bernardo'
 room.A203 = 'Mariana'
 
 console.log(room)
+
+
+class Person{
+  constructor(public firstName:string, public lastName:string, public age:number){}
+
+  greet(){
+    console.log("Hi")
+  }
+}
+
+//Cliente do Banco
+
+class Clients extends Person {
+  balance(){
+    console.log('Your Balance is $100')
+  }
+}
+
+let client1 = new Clients('Alef', 'Bacelar', 27);
+client1.age

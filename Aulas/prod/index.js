@@ -8,6 +8,21 @@ function add (num1:number, num2:number){
 let result = add(5, 6)
 
 console.log(result); */
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 //COMO FUNCIONA O TIPO ANY
 /* let price = 40
 let item = 'Apple'
@@ -280,3 +295,27 @@ room.A201 = 'Alef';
 room.A202 = 'Bernardo';
 room.A203 = 'Mariana';
 console.log(room);
+var Person = /** @class */ (function () {
+    function Person(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    Person.prototype.greet = function () {
+        console.log("Hi");
+    };
+    return Person;
+}());
+//Cliente do Banco
+var Clients = /** @class */ (function (_super) {
+    __extends(Clients, _super);
+    function Clients() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Clients.prototype.balance = function () {
+        console.log('Your Balance is $100');
+    };
+    return Clients;
+}(Person));
+var client1 = new Clients('Alef', 'Bacelar', 27);
+client1.age;
