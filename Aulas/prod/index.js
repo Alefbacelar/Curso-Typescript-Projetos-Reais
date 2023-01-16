@@ -261,11 +261,12 @@ user.name = 'Bernardo'
 console.log(`User`, user) */
 //READONLY
 var Movies = /** @class */ (function () {
-    function Movies(id, name) {
+    function Movies(id, name, _price) {
         this.id = id;
         this.name = name;
+        this._price = _price;
     }
     return Movies;
 }());
-var movie1 = new Movies(1, '300');
+var movie1 = new Movies(1, '300', 20);
 console.log(movie1);

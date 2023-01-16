@@ -328,14 +328,12 @@ console.log(`User`, user) */
 //READONLY
 
 class Movies {
-  readonly id: number
-  readonly name: string
-
-  constructor(id:number, name:string){
-    this.id = id
-    this.name = name
+  constructor(
+    public id:number,
+    public name:string,
+    private _price:number){
   }
 }
 
-let movie1 = new Movies(1, '300')
+let movie1 = new Movies(1, '300',20)
 console.log(movie1)
