@@ -158,5 +158,22 @@ const e1: incluir = {
  const allMyArrays: (number | string)[][] = [sequence, animals, stringsAndNumbers]
 
  console.log(allMyArrays) */
-var code = 50;
-console.log(code);
+/* let code : number = 50
+console.log(code) */
+// CRIANDO CLASSES SESSÃO 6
+var Users = /** @class */ (function () {
+    function Users(n, b) {
+        this.name = n;
+        this.balance = b;
+    }
+    Users.prototype.addMoney = function (amount) {
+        this.balance += amount;
+    };
+    return Users;
+}());
+var user1 = new Users('Alef', 20);
+user1.addMoney(100);
+var user2 = new Users('Bacelar', 40);
+user2.addMoney(500);
+console.log(user1);
+console.log(user2);
