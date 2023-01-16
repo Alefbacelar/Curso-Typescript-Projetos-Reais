@@ -338,7 +338,7 @@ console.log(`User`, user) */
 let movie1 = new Movies(1, '300',20)
 console.log(movie1) */
 
-class HotelRooms {
+/* class HotelRooms {
   [roonNumber:string]:string
 }
 
@@ -357,22 +357,22 @@ class Person{
   get greet(){
     return this.firstName + ' ' + this.lastName
   }
-}
+} */
 
 //Cliente do Banco
 
-class Clients extends Person {
- /*  balance(){
+/* class Clients extends Person {
+   balance(){
     console.log('Your Balance is $100')
-  } */
+  } 
   get greet(){
     return 'Dear' + this.firstName + ' ' + this.lastName
   }
-}
+} */
 
 //Funcionario do banco
 
-class Staff extends Person{
+/* class Staff extends Person{
   override get greet(){
     return 'Hi' + this.firstName + ' ' + this.lastName
   }
@@ -382,4 +382,48 @@ let client1 = new Clients('Alef', 'Bacelar', 27);
 let staff = new Staff('Bernardo', 'Bacelar', 2);
 
 console.log(client1.greet)
-console.log(staff.greet)
+console.log(staff.greet) */
+
+
+
+//EXERCICIO 1
+
+interface User {
+  name: string
+  age:number
+  occupation: string
+}
+
+interface Admin {
+  name:string
+  age: number 
+  role: string
+}
+
+type Person = User | Admin
+
+const persons: Person[] =[
+  {
+    name: 'Alef',
+    age: 27,
+    occupation: 'Desenvolvedor de software'
+  },
+  {
+    name: 'Bernardo',
+    age: 2,
+    role: 'Administrador'
+  }
+]
+
+function logPerson(person: Person){
+  let addInfo: string
+  if('role' in person){
+    addInfo = person.role
+  } else {
+    addInfo = person.occupation
+  }
+
+  console.log(`-${person.name}, ${person.age}, ${addInfo}`)
+}
+
+persons.forEach(logPerson)
