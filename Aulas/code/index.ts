@@ -297,9 +297,30 @@ console.log(mc.greet('Show')) */
 
 //EXERCICIO 4
 
-class Employee { 
+/* class Employee { 
   constructor(public title:string,public salary:number){ }
 }
 
 const employee = new Employee('Engineer', 1000000);
-console.log(`The new emplyee's title is ${employee.title} and they earb $ ${employee.salary}.`)
+console.log(`The new emplyee's title is ${employee.title} and they earb $ ${employee.salary}.`) */
+
+
+//EXERCICIO 5
+
+
+interface UserSchema {
+  id: number
+  name: string
+}
+
+class User implements UserSchema {
+  constructor(public name: string, readonly id:number){}
+}
+
+const user = new User('Dog', 1)
+console.log(user.id)
+
+user.name = 'Bernardo'
+/* user.id = 5 */
+
+console.log(`User`, user)
