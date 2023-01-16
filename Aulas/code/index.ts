@@ -271,7 +271,7 @@ AddToCart({id:1, title:'shoes'}) */
 
 //EXERCICIO 2
 
-interface Person {
+/* interface Person {
   name: string,
   age:number
 }
@@ -281,4 +281,15 @@ class Person implements Person{
 }
 
 const jane = new Person('Jane', 31);
-console.log(`${jane.name} is ${jane.age} years old`);
+console.log(`${jane.name} is ${jane.age} years old`); */
+
+//EXERCICIO 3
+
+class MC {
+  greet(event: string = 'party'):string{
+    return `Welcome to the ${event}`
+  }
+}
+
+const mc = new MC();
+console.log(mc.greet('Show'))
