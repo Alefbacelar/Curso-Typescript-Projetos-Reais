@@ -327,7 +327,7 @@ console.log(`User`, user) */
 
 //READONLY
 
-class Movies {
+/* class Movies {
   constructor(
     public id:number,
     public name:string,
@@ -336,4 +336,16 @@ class Movies {
 }
 
 let movie1 = new Movies(1, '300',20)
-console.log(movie1)
+console.log(movie1) */
+
+class HotelRooms {
+  [roonNumber:string]:string
+}
+
+let room = new HotelRooms()
+
+room.A201 = 'Alef'
+room.A202 = 'Bernardo'
+room.A203 = 'Mariana'
+
+console.log(room)

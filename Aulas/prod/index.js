@@ -260,13 +260,23 @@ user.name = 'Bernardo'
 
 console.log(`User`, user) */
 //READONLY
-var Movies = /** @class */ (function () {
-    function Movies(id, name, _price) {
-        this.id = id;
-        this.name = name;
-        this._price = _price;
+/* class Movies {
+  constructor(
+    public id:number,
+    public name:string,
+    private _price:number){
+  }
+}
+
+let movie1 = new Movies(1, '300',20)
+console.log(movie1) */
+var HotelRooms = /** @class */ (function () {
+    function HotelRooms() {
     }
-    return Movies;
+    return HotelRooms;
 }());
-var movie1 = new Movies(1, '300', 20);
-console.log(movie1);
+var room = new HotelRooms();
+room.A201 = 'Alef';
+room.A202 = 'Bernardo';
+room.A203 = 'Mariana';
+console.log(room);
