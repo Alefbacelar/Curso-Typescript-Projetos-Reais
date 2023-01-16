@@ -388,7 +388,7 @@ console.log(staff.greet) */
 
 //EXERCICIO 1
 
-interface User {
+/* interface User {
   name: string
   age:number
   occupation: string
@@ -426,4 +426,21 @@ function logPerson(person: Person){
   console.log(`-${person.name}, ${person.age}, ${addInfo}`)
 }
 
-persons.forEach(logPerson)
+persons.forEach(logPerson) */
+
+
+//EXERCICIO 2
+
+class Animal {
+  constructor(public name:string){}
+  move(meters: number){
+    console.log(`${this.name} moved ${meters}m.`)
+  }
+}
+
+class Snake extends Animal{
+  move(meters:number = 5) {
+    console.log('Slithering')
+    super.move(meters)
+  }
+}
