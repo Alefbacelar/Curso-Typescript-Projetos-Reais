@@ -354,18 +354,32 @@ console.log(room)
 class Person{
   constructor(public firstName:string, public lastName:string, public age:number){}
 
-  greet(){
-    console.log("Hi")
+  get greet(){
+    return this.firstName + ' ' + this.lastName
   }
 }
 
 //Cliente do Banco
 
 class Clients extends Person {
-  balance(){
+ /*  balance(){
     console.log('Your Balance is $100')
+  } */
+  get greet(){
+    return 'Dear' + this.firstName + ' ' + this.lastName
+  }
+}
+
+//Funcionario do banco
+
+class Staff extends Person{
+  override get greet(){
+    return 'Hi' + this.firstName + ' ' + this.lastName
   }
 }
 
 let client1 = new Clients('Alef', 'Bacelar', 27);
-client1.age
+let staff = new Staff('Bernardo', 'Bacelar', 2);
+
+console.log(client1.greet)
+console.log(staff.greet)

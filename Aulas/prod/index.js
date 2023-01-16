@@ -301,9 +301,13 @@ var Person = /** @class */ (function () {
         this.lastName = lastName;
         this.age = age;
     }
-    Person.prototype.greet = function () {
-        console.log("Hi");
-    };
+    Object.defineProperty(Person.prototype, "greet", {
+        get: function () {
+            return this.firstName + ' ' + this.lastName;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Person;
 }());
 //Cliente do Banco
@@ -312,10 +316,34 @@ var Clients = /** @class */ (function (_super) {
     function Clients() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Clients.prototype.balance = function () {
-        console.log('Your Balance is $100');
-    };
+    Object.defineProperty(Clients.prototype, "greet", {
+        /*  balance(){
+           console.log('Your Balance is $100')
+         } */
+        get: function () {
+            return 'Dear' + this.firstName + ' ' + this.lastName;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Clients;
 }(Person));
+//Funcionario do banco
+var Staff = /** @class */ (function (_super) {
+    __extends(Staff, _super);
+    function Staff() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(Staff.prototype, "greet", {
+        get: function () {
+            return 'Hi' + this.firstName + ' ' + this.lastName;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Staff;
+}(Person));
 var client1 = new Clients('Alef', 'Bacelar', 27);
-client1.age;
+var staff = new Staff('Bernardo', 'Bacelar', 2);
+console.log(client1.greet);
+console.log(staff.greet);
