@@ -308,7 +308,7 @@ console.log(`The new emplyee's title is ${employee.title} and they earb $ ${empl
 //EXERCICIO 5
 
 
-interface UserSchema {
+/* interface UserSchema {
   id: number
   name: string
 }
@@ -321,6 +321,21 @@ const user = new User('Dog', 1)
 console.log(user.id)
 
 user.name = 'Bernardo'
-/* user.id = 5 */
 
-console.log(`User`, user)
+console.log(`User`, user) */
+
+
+//READONLY
+
+class Movies {
+  readonly id: number
+  readonly name: string
+
+  constructor(id:number, name:string){
+    this.id = id
+    this.name = name
+  }
+}
+
+let movie1 = new Movies(1, '300')
+console.log(movie1)
