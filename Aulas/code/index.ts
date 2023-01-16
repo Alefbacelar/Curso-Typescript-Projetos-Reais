@@ -234,7 +234,7 @@ const e1: incluir = {
 
 //  INTERFACE
 
-interface Item {
+/* interface Item {
   name: string
   price: number
 
@@ -252,4 +252,19 @@ product1 = {
   }
 }
 
-product1.itemPurchased('You just bought a ')
+product1.itemPurchased('You just bought a ') */
+
+
+//EXERCICIO 1
+
+interface cartItem {
+  id:number,
+  title: string,
+  variantId?: number
+}
+
+function AddToCart(item: cartItem){ 
+  console.log(`Adding "${item.title}"to cart`);
+}
+
+AddToCart({id:1, title:'shoes'})
