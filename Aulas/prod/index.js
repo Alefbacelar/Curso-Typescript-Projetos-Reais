@@ -158,5 +158,5 @@ const e1: incluir = {
  const allMyArrays: (number | string)[][] = [sequence, animals, stringsAndNumbers]
 
  console.log(allMyArrays) */
-var code = 20;
+var code = 50;
 console.log(code);

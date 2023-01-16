@@ -202,5 +202,5 @@ const e1: incluir = {
   console.log(allMyArrays) */
 
 
-  let code : number = 20
+  let code : number = 50
   console.log(code)
