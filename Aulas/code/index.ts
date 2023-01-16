@@ -257,7 +257,7 @@ product1.itemPurchased('You just bought a ') */
 
 //EXERCICIO 1
 
-interface cartItem {
+/* interface cartItem {
   id:number,
   title: string,
   variantId?: number
@@ -267,4 +267,18 @@ function AddToCart(item: cartItem){
   console.log(`Adding "${item.title}"to cart`);
 }
 
-AddToCart({id:1, title:'shoes'})
+AddToCart({id:1, title:'shoes'}) */
+
+//EXERCICIO 2
+
+interface Person {
+  name: string,
+  age:number
+}
+
+class Person implements Person{
+  constructor(public name:string, public age:number){}
+}
+
+const jane = new Person('Jane', 31);
+console.log(`${jane.name} is ${jane.age} years old`);
