@@ -228,14 +228,21 @@ class Person implements Person{
 const jane = new Person('Jane', 31);
 console.log(`${jane.name} is ${jane.age} years old`); */
 //EXERCICIO 3
-var MC = /** @class */ (function () {
-    function MC() {
+/* class MC {
+  greet(event: string = 'party'):string{
+    return `Welcome to the ${event}`
+  }
+}
+
+const mc = new MC();
+console.log(mc.greet('Show')) */
+//EXERCICIO 4
+var Employee = /** @class */ (function () {
+    function Employee(title, salary) {
+        this.title = title;
+        this.salary = salary;
     }
-    MC.prototype.greet = function (event) {
-        if (event === void 0) { event = 'party'; }
-        return "Welcome to the " + event;
-    };
-    return MC;
+    return Employee;
 }());
-var mc = new MC();
-console.log(mc.greet('Show'));
+var employee = new Employee('Engineer', 1000000);
+console.log("The new emplyee's title is " + employee.title + " and they earb $ " + employee.salary + ".");

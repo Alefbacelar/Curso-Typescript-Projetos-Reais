@@ -285,11 +285,21 @@ console.log(`${jane.name} is ${jane.age} years old`); */
 
 //EXERCICIO 3
 
-class MC {
+/* class MC {
   greet(event: string = 'party'):string{
     return `Welcome to the ${event}`
   }
 }
 
 const mc = new MC();
-console.log(mc.greet('Show'))
+console.log(mc.greet('Show')) */
+
+
+//EXERCICIO 4
+
+class Employee { 
+  constructor(public title:string,public salary:number){ }
+}
+
+const employee = new Employee('Engineer', 1000000);
+console.log(`The new emplyee's title is ${employee.title} and they earb $ ${employee.salary}.`)
