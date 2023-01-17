@@ -380,12 +380,20 @@ class Desk extends furniture{
 const desk = new Desk()
 desk.kind() */
 //desk.manuFacturer
-var multiply;
-var capitalize;
-capitalize = function (value) {
-    return "" + value.charAt(0).toUpperCase() + value.slice(1);
-};
-multiply = function (x, y) {
-    return x * y;
-};
-console.log(capitalize("nifty " + multiply(5, 10)));
+/* let multiply: (val1: number, val2: number)=> number;
+let capitalize: (val:string)=> string
+
+capitalize = function(value:string): string {
+  return `${value.charAt(0).toUpperCase()}${value.slice(1)}`
+}
+
+multiply = function(x:number, y:number): number {
+  return x * y;
+}
+
+console.log(capitalize(`nifty ${multiply(5,10)}`)); */
+//EXERCICIO 5
+function layEggs(quantity, color) {
+    console.log("You just laid " + quantity + " " + color + " eggs. Good job!");
+}
+layEggs(10, 'Blue');

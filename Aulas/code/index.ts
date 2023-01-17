@@ -465,7 +465,7 @@ desk.kind() */
 //desk.manuFacturer
 
 
-let multiply: (val1: number, val2: number)=> number;
+/* let multiply: (val1: number, val2: number)=> number;
 let capitalize: (val:string)=> string
 
 capitalize = function(value:string): string {
@@ -476,4 +476,14 @@ multiply = function(x:number, y:number): number {
   return x * y;
 }
 
-console.log(capitalize(`nifty ${multiply(5,10)}`));
+console.log(capitalize(`nifty ${multiply(5,10)}`)); */
+
+
+
+//EXERCICIO 5
+
+function layEggs(quantity: number, color: string): void{
+  console.log(`You just laid ${quantity} ${color} eggs. Good job!`)
+}
+
+layEggs(10, 'Blue');
