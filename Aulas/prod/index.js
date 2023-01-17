@@ -8,21 +8,6 @@ function add (num1:number, num2:number){
 let result = add(5, 6)
 
 console.log(result); */
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 /* import { Class } from "@mui/icons-material"; */
 //COMO FUNCIONA O TIPO ANY
 /* let price = 40
@@ -382,23 +367,25 @@ class Snake extends Animal{
   }
 } */
 //EXERCICIO 3
-var furniture = /** @class */ (function () {
-    function furniture(manuFacturer) {
-        if (manuFacturer === void 0) { manuFacturer = 'Ikea'; }
-        this.manuFacturer = manuFacturer;
-    }
-    return furniture;
-}());
-var Desk = /** @class */ (function (_super) {
-    __extends(Desk, _super);
-    function Desk() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Desk.prototype.kind = function () {
-        console.log("This is a desk made by " + this.manuFacturer);
-    };
-    return Desk;
-}(furniture));
-var desk = new Desk();
-desk.kind();
+/* class furniture {
+  constructor(protected manuFacturer:string = 'Ikea'){}
+}
+
+class Desk extends furniture{
+  kind(){
+    console.log(`This is a desk made by ${this.manuFacturer}`)
+  }
+}
+
+const desk = new Desk()
+desk.kind() */
 //desk.manuFacturer
+var multiply;
+var capitalize;
+capitalize = function (value) {
+    return "" + value.charAt(0).toUpperCase() + value.slice(1);
+};
+multiply = function (x, y) {
+    return x * y;
+};
+console.log(capitalize("nifty " + multiply(5, 10)));
